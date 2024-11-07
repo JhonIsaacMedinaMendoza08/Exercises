@@ -1,9 +1,15 @@
-#Write a program that determines whether a numerical note is "Pass" or "Fail" using if
-print ("Exercise 2 Pass or fail")
+#Write a program that asks the user for a positive integer n and calculates the factorial. 
+# Use a for loop to perform the calculation.
 
-number1 = int(input("Please, enter the score to determine if you pass or fail: "))
+print ("Exercise 3 Factorial")
 
-if number1 >= 60 :
-    print ("pass")
+n = int(input("Please enter the number: "))
+
+if n < 0:
+    print ("Please enter a positive number ")
 else:
-    print ("fail")
+    factorial = 1
+    for i in range (1 , n + 1):
+        factorial = factorial*i
+
+    print (f"The factorial of {n} is {factorial}")
