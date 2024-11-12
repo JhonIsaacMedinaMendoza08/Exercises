@@ -1,25 +1,19 @@
-#Use match to implement a simple calculator.
-
+#Write a program that determines the type of triangle based on its sides using if
 print (""" 
 ---------------------------------------------
---------Exercise 3 Simple calculator---------
+--------Exercise 4 type of triangles---------
 ---------------------------------------------""")
-num1 = float(input("    Please enter the number: "))
-symbol = str(input("    Enter the symbol (+, -, *, /): "))
-num2 = float(input("    Please enter the number: "))
-match symbol:
-    case '+':
-        resultado = num1 + num2
-    case '-':
-        resultado = num1 - num2
-    case '*':
-        resultado = num1 * num2
-    case '/':
-        if num2 == 0:
-            print("Error: Cannot divide by zero.")
-        resultado = num1 / num2
-    case _:
-        print("Invalid operation. Choose from ' + ', ' - ', ' * ' or ' / '.")            
-print(f"""
----------------------------------------------
-The result of the {symbol} is: {resultado}
+
+lado1 = float(input("\tPlease enter the side distance: "))
+lado2 = float(input("\tPlease enter the side distance: "))
+lado3 = float(input("\tPlease enter the side distance: "))
+
+
+if lado1==lado2 ==lado3:
+    print ("\tIt is an equilateral triangle")
+elif lado1==lado2 or lado1==lado3 or  lado2==lado3:
+    print ("\tIt is an isosceles triangle")
+elif lado1!=lado2 and lado1!=lado3 and lado2!=lado3 and lado1>0 and lado2>0 and lado3>0:
+    print ("\tIt is a scalene triangle")
+if lado1 <= 0 or lado2 <= 0 or lado3 <= 0:
+    print ("\tInvalid! Enter positive values greater than zero")
