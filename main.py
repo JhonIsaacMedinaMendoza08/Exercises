@@ -1,26 +1,22 @@
-#Write a program that calculates an employee's net salary after applying taxes.
+#Write a program that calculates the time it takes for a car to reach its destination.
 
 print (""" 
 ---------------------------------------------------------
------------------Exercise 15 Salary----------------------
+-----------------Exercise 16 ----------------------------
 ---------------------------------------------------------""")
 
-def salarioNeto ():
-    grossSalary = float(input("Enter your salary before taxes: "))
-    country = input("Enter your country (Country A, Country B, Country C): ")
-    match country.lower():
-        case "a" | "country a" :
-            taxes = 0.20
-        case "b" | "country b":
-            taxes = 0.15
-        case "c" | "country c":
-            taxes = 0.10
-        case _:
-            taxes = 0.25
-        
-    finalTaxes = grossSalary * taxes
-    finalSalary = grossSalary - finalTaxes
+def travel_time():
+    distance = float(input("Please enter the distance to travel: "))
+    speed = float(input("Please enter the average speed: "))
 
-    print (f"Your final salary is : {finalSalary}")
+    time_hours = distance/speed
 
-salarioNeto()
+    hours = int(time_hours)
+    minutes = (time_hours - hours)*60
+
+    print (f"El tiempo estimado de viaje es: {hours} hours and {minutes:.0f} minutes")
+
+    if speed > 120:
+        print ("Warning! You are exceeding the speed limit")
+
+travel_time()
