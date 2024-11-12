@@ -1,16 +1,20 @@
-#Write a program that classifies a person based on their age.
+#Request a numerical grade and classify it as A (90-100), B (80-89), C (70-79), D (60-69), or F (<60).
 print (""" 
 ---------------------------------------------------------
--------------Exercise 9 years classification-------------
+-------------Exercise 10 numerical grade-----------------
 ---------------------------------------------------------""")
 
-Age = int (input("Enter your age to determine if you are a child, teenager, adult or senior: "))
+grade = int (input("Enter your numerical grade to be evaluated: "))
 
-if Age >=0 and Age<= 12:
-    print ("The person is a child")
-elif Age >=13 and Age <=17:
-    print ("The person is a teenager")
-elif Age >= 18 and Age <= 64 :
-    print ("The person is an adult")
+if grade >=90 and grade <=100:
+    print ("Your rating is: A")
+elif grade >= 80 and grade <= 89 :
+    print ("Your rating is: B")
+elif grade >= 70 and grade <= 79 :
+    print ("Your rating is: C")
+elif grade >= 60 and grade <= 69 :
+    print ("Your rating is: D")
+elif grade <= 59 and grade <= 0:
+    print ("Your rating is: F")
 else:
-    print ("The person is an old man")
+    print ("Enter a grade between 0-100")
