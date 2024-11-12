@@ -1,22 +1,17 @@
-#Write a program that calculates the time it takes for a car to reach its destination.
+#Write a program that calculates a student's final grade based on his/her grade.
 
 print (""" 
 ---------------------------------------------------------
------------------Exercise 16 ----------------------------
+-----------------Exercise 17 ----------------------------
 ---------------------------------------------------------""")
 
-def travel_time():
-    distance = float(input("Please enter the distance to travel: "))
-    speed = float(input("Please enter the average speed: "))
+def final_qualification():
+    qualification = float(input("Enter the student's grade (0-100): "))
+    additionalPoints = input("Did the student do additional homework? (yes/no): ").lower()
+    if additionalPoints == "yes":
+        qualification += (qualification * 0.05)
+        if qualification > 100:
+            qualification = 100  
+    print(f"The student's final grade is: {qualification:.2f}")
 
-    time_hours = distance/speed
-
-    hours = int(time_hours)
-    minutes = (time_hours - hours)*60
-
-    print (f"El tiempo estimado de viaje es: {hours} hours and {minutes:.0f} minutes")
-
-    if speed > 120:
-        print ("Warning! You are exceeding the speed limit")
-
-travel_time()
+final_qualification()
