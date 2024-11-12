@@ -1,17 +1,16 @@
-#Write a program that asks the user for a positive integer n and calculates the factorial. 
-# Use a for loop to perform the calculation.
+#Write a program that prompts the user for two integers, a start value and an end value. The program should print all the 
+# even numbers in that range, including the limits. Use a for loop to iterate through the range.
 print(""" 
 ---------------------------------------------------------
----------Exercise 3 Iterative Structures-----------------
+---------Exercise 4 Iterative Structures-----------------
 ---------------------------------------------------------""")
 
-n = int(input("Please enter the number: "))
+start = int(input("Enter the start value: "))
+end = int(input("Enter the end value: "))
 
-if n < 0:
-    print ("Please enter a positive number ")
-else:
-    factorial = 1
-    for i in range (1 , n + 1):
-        factorial = factorial*i
+if start > end:
+    print("The start value must be less than or equal to the end value.")
 
-    print (f"The factorial of {n} is {factorial}")
+for even in range(start, end + 1):
+    if even % 2 == 0:
+        print(even)
