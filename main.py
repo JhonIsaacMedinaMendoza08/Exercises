@@ -1,13 +1,16 @@
-#Write a program that determines whether a year is a leap year or not.
+#Write a program that classifies a person based on their age.
 print (""" 
 ---------------------------------------------------------
-------------------Exercise 8 leap year-------------------
+-------------Exercise 9 years classification-------------
 ---------------------------------------------------------""")
-year = int(input("Enter the year to validate: "))
 
-if year % 400 == 0:#or year %400 ==0 :
-    print ("The year is leap year")
-elif year %4 ==0:
-    print ("The year is leap year")
+Age = int (input("Enter your age to determine if you are a child, teenager, adult or senior: "))
+
+if Age >=0 and Age<= 12:
+    print ("The person is a child")
+elif Age >=13 and Age <=17:
+    print ("The person is a teenager")
+elif Age >= 18 and Age <= 64 :
+    print ("The person is an adult")
 else:
-    print ("The year isn't leap year")
+    print ("The person is an old man")
