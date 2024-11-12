@@ -1,26 +1,22 @@
-#Write a program that converts Celsius to Fahrenheit or Fahrenheit to Celsius using match .
+#Write a program that calculates BMI and determines weight status.
+import math
+
 print (""" 
 ---------------------------------------------------------
---------------------Exercise 11 -------------------------
+--------------------Exercise 12 BMI ---------------------
 ---------------------------------------------------------""")
 
+weight = float(input("PLease enter your weight (KG): "))
+height = float(input("Please enter your height (M): "))
 
-def convert_temperature(number, scale):
-    match scale.lower():
-        case "c":
-            f = (1.8 * number) + 32
-            return f
-        case "f":
-            c = (number - 32) / 1.8
-            return c
-        case _:
-            return "Invalid scale! , try again with 'C' or 'F'"
+imc = weight / math.pow (height, 2)
 
 
-Temperture = float(input("Please enter the temperture:  "))
-scale = input("Celsious - 'C' or fahrenheir - 'F':  ")
-
-
-new_temperture = convert_temperature(Temperture, scale)
-
-print (f"The converted temperture is: {new_temperture} grades")
+if imc < 18.5:
+    print (f"you are underweight with BMI {imc:.2f}")
+elif imc > 18.5 and imc < 24.9:
+    print (f"You are a normal weight with BMI {imc:.2f}")
+elif imc > 25 and imc < 29.9:
+    print (f"you are overweight with BMI {imc:.2f}")
+else:
+    print (f"you are in obesity with BMI {imc:.2f}")
