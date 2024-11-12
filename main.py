@@ -1,13 +1,13 @@
-#Write a program that determines whether a number is positive, negative, or zero using if .
+#Write a program that determines whether a year is a leap year or not.
 print (""" 
 ---------------------------------------------------------
------Exercise 7 Positive, negative or zero number--------
+------------------Exercise 8 leap year-------------------
 ---------------------------------------------------------""")
-number = int(input("Enter the number to validate: "))
+year = int(input("Enter the year to validate: "))
 
-if number == 0:
-    print ("The number provided is zero")
-elif number < 0:
-    print ("The number provided is negative")
+if year % 400 == 0:#or year %400 ==0 :
+    print ("The year is leap year")
+elif year %4 ==0:
+    print ("The year is leap year")
 else:
-    print ("The number provided is positive")
+    print ("The year isn't leap year")
