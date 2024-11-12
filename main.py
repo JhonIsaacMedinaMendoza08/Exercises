@@ -1,28 +1,23 @@
-#Write a program that, given a number from 1 to 7, prints the corresponding day of the week using match .
+#Write a program that implements a number guessing game.
+
+import random
 print (""" 
 ---------------------------------------------------------
---------------Exercise 5 Day of the week-----------------
+--------------Exercise 6 guess the number----------------
 ---------------------------------------------------------""")
 
-def day_of_the_week(day_number):
-    match day_number:
-        case 1:
-            return "Monday"
-        case 2:
-            return "Tuesday"
-        case 3:
-            return "Wednesday"
-        case 4:
-            return "Thursday"
-        case 5:
-            return "Friday"
-        case 6:
-            return "Saturday"
-        case 7:
-            return "Sunday"
-        case _:
-            return "Invalid number. Must be between 1 and 7."
-
-day_number = int(input("Enter a number from 1 to 7 to get the day of the week:"))
-
-print (f"The day of the week according to the number is: {day_of_the_week(day_number)}")
+def guess_the_number():  
+    number_to_guess = random.randint(1,10)
+    print ("\tWelcome to guess the number")
+    print ("\tthink of a number between 1 and 10")
+    while True:
+        guess = int(input("Enter the number you thought of: "))
+        #print ({number_to_guess})
+        if guess > number_to_guess:
+            print ("The number entered is higher, please try again (numbers between 1-10)")
+        elif guess < number_to_guess:
+            print ("The number entered is less, please try again (numbers between 1-10)")
+        else:
+            print ("the number entered is the same, congratulations!!")
+            break
+guess_the_number()
