@@ -1,20 +1,26 @@
-#Request a numerical grade and classify it as A (90-100), B (80-89), C (70-79), D (60-69), or F (<60).
+#Write a program that converts Celsius to Fahrenheit or Fahrenheit to Celsius using match .
 print (""" 
 ---------------------------------------------------------
--------------Exercise 10 numerical grade-----------------
+--------------------Exercise 11 -------------------------
 ---------------------------------------------------------""")
 
-grade = int (input("Enter your numerical grade to be evaluated: "))
 
-if grade >=90 and grade <=100:
-    print ("Your rating is: A")
-elif grade >= 80 and grade <= 89 :
-    print ("Your rating is: B")
-elif grade >= 70 and grade <= 79 :
-    print ("Your rating is: C")
-elif grade >= 60 and grade <= 69 :
-    print ("Your rating is: D")
-elif grade <= 59 and grade <= 0:
-    print ("Your rating is: F")
-else:
-    print ("Enter a grade between 0-100")
+def convert_temperature(number, scale):
+    match scale.lower():
+        case "c":
+            f = (1.8 * number) + 32
+            return f
+        case "f":
+            c = (number - 32) / 1.8
+            return c
+        case _:
+            return "Invalid scale! , try again with 'C' or 'F'"
+
+
+Temperture = float(input("Please enter the temperture:  "))
+scale = input("Celsious - 'C' or fahrenheir - 'F':  ")
+
+
+new_temperture = convert_temperature(Temperture, scale)
+
+print (f"The converted temperture is: {new_temperture} grades")
