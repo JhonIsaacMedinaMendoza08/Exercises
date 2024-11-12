@@ -1,19 +1,28 @@
-#Write a program that determines the type of triangle based on its sides using if
+#Write a program that, given a number from 1 to 7, prints the corresponding day of the week using match .
 print (""" 
----------------------------------------------
---------Exercise 4 type of triangles---------
----------------------------------------------""")
+---------------------------------------------------------
+--------------Exercise 5 Day of the week-----------------
+---------------------------------------------------------""")
 
-lado1 = float(input("\tPlease enter the side distance: "))
-lado2 = float(input("\tPlease enter the side distance: "))
-lado3 = float(input("\tPlease enter the side distance: "))
+def day_of_the_week(day_number):
+    match day_number:
+        case 1:
+            return "Monday"
+        case 2:
+            return "Tuesday"
+        case 3:
+            return "Wednesday"
+        case 4:
+            return "Thursday"
+        case 5:
+            return "Friday"
+        case 6:
+            return "Saturday"
+        case 7:
+            return "Sunday"
+        case _:
+            return "Invalid number. Must be between 1 and 7."
 
+day_number = int(input("Enter a number from 1 to 7 to get the day of the week:"))
 
-if lado1==lado2 ==lado3:
-    print ("\tIt is an equilateral triangle")
-elif lado1==lado2 or lado1==lado3 or  lado2==lado3:
-    print ("\tIt is an isosceles triangle")
-elif lado1!=lado2 and lado1!=lado3 and lado2!=lado3 and lado1>0 and lado2>0 and lado3>0:
-    print ("\tIt is a scalene triangle")
-if lado1 <= 0 or lado2 <= 0 or lado3 <= 0:
-    print ("\tInvalid! Enter positive values greater than zero")
+print (f"The day of the week according to the number is: {day_of_the_week(day_number)}")
