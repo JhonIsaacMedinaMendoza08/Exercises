@@ -1,24 +1,20 @@
-#Write a program that generates a random number between 1 and 100 and allows the user to guess it. 
-# The program should give clues as to whether the entered number is greater or less than the secret number.
+#Write a program that asks the user to input integers indefinitely. The program should 
+# add up the numbers as long as they are even, but should stop if the user inputs an odd number. 
+# Use a while loop to accomplish this.
 
-import random
 print(""" 
 ---------------------------------------------------------
----------Exercise 6 Iterative Structures-----------------
+---------Exercise 7 Iterative Structures-----------------
 ---------------------------------------------------------""")
 
-def guess_the_number():  
-    number_to_guess = random.randint(1,100)
-    print ("\tWelcome to guess the number")
-    print ("\tthink of a number between 1 and 100")
-    while True:
-        guess = int(input("Enter the number you thought of: "))
-        #print ({number_to_guess})
-        if guess > number_to_guess:
-            print ("The number entered is higher, please try again (numbers between 1-100)")
-        elif guess < number_to_guess:
-            print ("The number entered is less, please try again (numbers between 1-100)")
-        else:
-            print ("the number entered is the same, congratulations!!")
-            break
-guess_the_number()
+sum = 0
+    
+while True: 
+    number = int(input("Enter an integer: ")) 
+        
+    if number % 2 != 0: 
+        print("Odd number entered.")
+        break 
+    else:
+        sum = number + sum
+print(f"The sum of the even numbers given is: {sum}")
