@@ -1,14 +1,17 @@
-#Write a program that prompts the user for a string of text and counts how many vowels (a, e, i, o, u) it contains. 
-# Use a for loop to iterate through the string and perform the count.
+#Write a program that asks the user for a positive integer n and calculates the factorial. 
+# Use a for loop to perform the calculation.
 print(""" 
 ---------------------------------------------------------
----------Exercise 2 Iterative Structures-----------------
+---------Exercise 3 Iterative Structures-----------------
 ---------------------------------------------------------""")
 
-text = input("Enter a text string: ")
-number_of_vowels = 0
-vowels = "aeiouAEIOU"
-for i in text:
-    if i in vowels: 
-        number_of_vowels += 1
-print(f"The number of vowels in the chain is: {number_of_vowels}")
+n = int(input("Please enter the number: "))
+
+if n < 0:
+    print ("Please enter a positive number ")
+else:
+    factorial = 1
+    for i in range (1 , n + 1):
+        factorial = factorial*i
+
+    print (f"The factorial of {n} is {factorial}")
